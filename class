@@ -1,0 +1,6 @@
+public without sharing class SearchInDataTableCtrl {
+    @AuraEnabled
+    public static list<Account> getAllAccounts(){
+        return [SELECT Id, Name, Phone FROM Account WHERE createddate < 2020-01-01T01:02:03Z];
+    }
+}
