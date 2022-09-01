@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon class="slds-m-right_x-small" icon-name="standard:account" size="small"></lightning-icon>
+            Search Accounts
+        </h3>
+        <div class="slds-p-horizontal_small">
+            <lightning-input name="enter-search" label="" type="search" placeholder="Search Account..."
+                onchange={searchHandler}></lightning-input>
+        </div>
+        <div class="slds-m-top_x-small slds-box outerDesign">
+            <div style={tableHeight}>
+                <lightning-datatable key-field="id" data={allAccounts}
+                    columns={columns}>
+                </lightning-datatable>
+            </div>
+        </div>
+    </lightning-card>
+</template>
